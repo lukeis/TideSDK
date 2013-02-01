@@ -41,7 +41,7 @@
 
 *		//if file exists, then load properties.
 *		if(file.exists()) {
-*			userProperties = Ti.App.loadProperties(file);
+*			userProperties = Ti.App.loadProperties(file.nativePath());
 *		} else {
 *		//create new set of properties if file doesn't exist
 *			userProperties = Ti.App.createProperties({
@@ -58,7 +58,7 @@
 *		//set an integer value in properties
 *		userProperties.setInt('customInt',9);
 *		//making sure that the property values are saved to the file object
-*		userProperties.saveTo(file);
+*		userProperties.saveTo(file.nativePath());
 *		//null out file object as pointer not used anymore
 *		file = null;
 *
